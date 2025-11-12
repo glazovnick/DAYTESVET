@@ -8,24 +8,34 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <div class="header-container">
-        <button class="burger-menu-btn" aria-label="Меню" id="burgerMenuBtn">
-          <span></span>
-          <span></span>
-          <span></span>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button
+          class="site-header__burger"
+          aria-label="Меню"
+          id="burgerMenuBtn"
+        >
+          <span class="site-header__burger-line"></span>
+          <span class="site-header__burger-line"></span>
+          <span class="site-header__burger-line"></span>
         </button>
-        <nav class="nav-menu">
-          <a href="#" class="nav-item active">Внутреннее освещение</a>
-          <a href="#" class="nav-item">Внешнее освещение</a>
-          <a href="#" class="nav-item">Комплектующие</a>
-          <a href="#" class="nav-item">Изготовление и ремонт</a>
+        <nav class="site-header__nav">
+          <a
+            href="#"
+            class="site-header__nav-link site-header__nav-link--active"
+            >Внутреннее освещение</a
+          >
+          <a href="#" class="site-header__nav-link">Внешнее освещение</a>
+          <a href="#" class="site-header__nav-link">Комплектующие</a>
+          <a href="#" class="site-header__nav-link">Изготовление и ремонт</a>
         </nav>
-        <a href="/" class="brand-name">[DAYTESVET]</a>
-        <div class="header-right">
-          <a href="tel:+79161289982" class="phone">+7 (916) 128-99-82</a>
-          <div class="header-icons">
-            <button class="icon-btn" aria-label="Телефон">
+        <a href="/" class="site-header__brand">[DAYTESVET]</a>
+        <div class="site-header__actions">
+          <a href="tel:+79161289982" class="site-header__phone"
+            >+7 (916) 128-99-82</a
+          >
+          <div class="site-header__icons">
+            <button class="site-header__icon-button" aria-label="Телефон">
               <svg
                 width="20"
                 height="20"
@@ -39,7 +49,7 @@
                 ></path>
               </svg>
             </button>
-            <button class="icon-btn" aria-label="Корзина">
+            <button class="site-header__icon-button" aria-label="Корзина">
               <svg
                 width="20"
                 height="20"
@@ -61,15 +71,15 @@
     </header>
 
     <!-- Mobile Sidebar Dropdown -->
-    <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
-    <aside class="mobile-sidebar" id="mobileSidebar">
-      <div class="mobile-sidebar-watermark">DAYTESVET</div>
+    <div class="mobile-menu__overlay" id="mobileSidebarOverlay"></div>
+    <aside class="mobile-menu" id="mobileSidebar">
+      <div class="mobile-menu__watermark">DAYTESVET</div>
 
       <!-- Mobile Sidebar Header -->
-      <div class="mobile-sidebar-header">
-        <a href="/" class="mobile-sidebar-logo">[DAYTESVET]</a>
-        <div class="mobile-sidebar-header-right">
-          <a href="tel:+79161289982" class="mobile-sidebar-phone">
+      <div class="mobile-menu__header">
+        <a href="/" class="mobile-menu__logo">[DAYTESVET]</a>
+        <div class="mobile-menu__header-actions">
+          <a href="tel:+79161289982" class="mobile-menu__phone">
             <svg
               width="20"
               height="20"
@@ -84,7 +94,7 @@
             </svg>
             +7 (916) 128-99-82
           </a>
-          <button class="mobile-sidebar-cart" aria-label="Корзина">
+          <button class="mobile-menu__cart-button" aria-label="Корзина">
             <svg
               width="20"
               height="20"
@@ -104,116 +114,133 @@
       </div>
 
       <!-- Mobile Sidebar Content -->
-      <div class="mobile-sidebar-content">
-        <h3 class="mobile-main-category">Внутреннее освещение</h3>
-        <ul class="mobile-category-list">
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link">Линейные светильники</a>
-            <span class="mobile-category-count">(48)</span>
+      <div class="mobile-menu__content">
+        <h3 class="mobile-menu__section-title">Внутреннее освещение</h3>
+        <ul class="mobile-menu__category-list">
+          <li class="mobile-menu__category-item">
+            <a href="#" class="mobile-menu__category-link"
+              >Линейные светильники</a
+            >
+            <span class="mobile-menu__category-count">(48)</span>
           </li>
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link active"
+          <li class="mobile-menu__category-item">
+            <a
+              href="#"
+              class="mobile-menu__category-link mobile-menu__category-link--active"
               >Фигурные светильники</a
             >
-            <span class="mobile-category-count">(27)</span>
+            <span class="mobile-menu__category-count">(27)</span>
           </li>
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link"
+          <li class="mobile-menu__category-item">
+            <a href="#" class="mobile-menu__category-link"
               >Встраиваемые светильники</a
             >
-            <span class="mobile-category-count">(56)</span>
+            <span class="mobile-menu__category-count">(56)</span>
           </li>
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link">Настенные светильники</a>
-            <span class="mobile-category-count">(31)</span>
+          <li class="mobile-menu__category-item">
+            <a href="#" class="mobile-menu__category-link"
+              >Настенные светильники</a
+            >
+            <span class="mobile-menu__category-count">(31)</span>
           </li>
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link">Трековые светильники</a>
-            <span class="mobile-category-count">(16)</span>
+          <li class="mobile-menu__category-item">
+            <a href="#" class="mobile-menu__category-link"
+              >Трековые светильники</a
+            >
+            <span class="mobile-menu__category-count">(16)</span>
           </li>
-          <li class="mobile-category-item">
-            <a href="#" class="mobile-category-link">Промышленное освещение</a>
-            <span class="mobile-category-count">(20)</span>
+          <li class="mobile-menu__category-item">
+            <a href="#" class="mobile-menu__category-link"
+              >Промышленное освещение</a
+            >
+            <span class="mobile-menu__category-count">(20)</span>
           </li>
         </ul>
 
-        <ul class="mobile-main-categories">
-          <li class="mobile-main-category-item">
-            <a href="#" class="mobile-main-category-link">Внешнее освещение</a>
+        <ul class="mobile-menu__main-links">
+          <li class="mobile-menu__main-item">
+            <a href="#" class="mobile-menu__main-link">Внешнее освещение</a>
           </li>
-          <li class="mobile-main-category-item">
-            <a href="#" class="mobile-main-category-link"
+          <li class="mobile-menu__main-item">
+            <a href="#" class="mobile-menu__main-link"
               >Шинопровод и комплектующие</a
             >
           </li>
-          <li class="mobile-main-category-item">
-            <a href="#" class="mobile-main-category-link"
-              >Изготовление и ремонт</a
-            >
+          <li class="mobile-menu__main-item">
+            <a href="#" class="mobile-menu__main-link">Изготовление и ремонт</a>
           </li>
         </ul>
       </div>
 
       <!-- Mobile Sidebar Footer -->
-      <div class="mobile-sidebar-footer">
-        <a href="tel:+79161289982" class="mobile-footer-phone"
+      <div class="mobile-menu__footer">
+        <a href="tel:+79161289982" class="mobile-menu__footer-phone"
           >+7 (916) 128-99-82</a
         >
-        <a href="mailto:Daytesvet@gmail.com" class="mobile-footer-email"
+        <a href="mailto:Daytesvet@gmail.com" class="mobile-menu__footer-email"
           >Daytesvet@gmail.com</a
         >
-        <div class="mobile-footer-brand">[DAYTESVET]</div>
-        <div class="mobile-footer-copyright">© 2025</div>
-        <div class="mobile-footer-design">Дизайн: Raion</div>
+        <div class="mobile-menu__footer-brand">[DAYTESVET]</div>
+        <div class="mobile-menu__footer-copy">© 2025</div>
+        <div class="mobile-menu__footer-design">Дизайн: Raion</div>
       </div>
     </aside>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="page-main">
       <!-- Sidebar -->
-      <aside class="sidebar">
-        <h2 class="sidebar-title">Категории</h2>
-        <ul class="category-list">
-          <li class="category-item">
-            <a href="#" class="category-link">Линейные светильники</a>
-            <span class="category-count">(48)</span>
+      <aside class="catalog-sidebar">
+        <h2 class="catalog-sidebar__title">Категории</h2>
+        <ul class="catalog-sidebar__list">
+          <li class="catalog-sidebar__item">
+            <a href="#" class="catalog-sidebar__link">Линейные светильники</a>
+            <span class="catalog-sidebar__count">(48)</span>
           </li>
-          <li class="category-item">
-            <a href="#" class="category-link active">Фигурные светильники</a>
-            <span class="category-count">(27)</span>
+          <li class="catalog-sidebar__item">
+            <a
+              href="#"
+              class="catalog-sidebar__link catalog-sidebar__link--active"
+              >Фигурные светильники</a
+            >
+            <span class="catalog-sidebar__count">(27)</span>
           </li>
-          <li class="category-item">
-            <a href="#" class="category-link">Встраиваемые светильники</a>
-            <span class="category-count">(56)</span>
+          <li class="catalog-sidebar__item">
+            <a href="#" class="catalog-sidebar__link"
+              >Встраиваемые светильники</a
+            >
+            <span class="catalog-sidebar__count">(56)</span>
           </li>
-          <li class="category-item">
-            <a href="#" class="category-link">Настенные светильники</a>
-            <span class="category-count">(31)</span>
+          <li class="catalog-sidebar__item">
+            <a href="#" class="catalog-sidebar__link">Настенные светильники</a>
+            <span class="catalog-sidebar__count">(31)</span>
           </li>
-          <li class="category-item">
-            <a href="#" class="category-link">Трековые светильники</a>
-            <span class="category-count">(16)</span>
+          <li class="catalog-sidebar__item">
+            <a href="#" class="catalog-sidebar__link">Трековые светильники</a>
+            <span class="catalog-sidebar__count">(16)</span>
           </li>
-          <li class="category-item">
-            <a href="#" class="category-link">Промышленное освещение</a>
-            <span class="category-count">(20)</span>
+          <li class="catalog-sidebar__item">
+            <a href="#" class="catalog-sidebar__link">Промышленное освещение</a>
+            <span class="catalog-sidebar__count">(20)</span>
           </li>
         </ul>
       </aside>
 
       <!-- Products Grid -->
-      <section class="products-section">
-        <div class="products-grid">
+      <section class="product-gallery">
+        <div class="product-gallery__grid">
           <!-- Product Card 1 -->
-          <div class="product-card large">
-            <div class="product-image">
+          <div class="product-card product-card--large">
+            <div class="product-card__image">
               <img src="images/img-large.png" alt="TR Kardan S" />
             </div>
-            <h3 class="product-name">TR Kardan S</h3>
-            <p class="product-stock">На складе (0)</p>
-            <div class="product-footer">
-              <span class="product-price">1250 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">TR Kardan S</h3>
+            <p class="product-card__stock">На складе (0)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1250 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -234,14 +261,17 @@
 
           <!-- Product Card 2 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img.png" alt="Grazioso 2 LED 2x30W" />
             </div>
-            <h3 class="product-name">Grazioso 2 LED 2x30W</h3>
-            <p class="product-stock">На складе (18)</p>
-            <div class="product-footer">
-              <span class="product-price">1200 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 2 LED 2x30W</h3>
+            <p class="product-card__stock">На складе (18)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1200 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -262,14 +292,17 @@
 
           <!-- Product Card 3 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-2.png" alt="Largo LED 30W Matt" />
             </div>
-            <h3 class="product-name">Largo LED 30W Matt</h3>
-            <p class="product-stock">На складе (0)</p>
-            <div class="product-footer">
-              <span class="product-price">780 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Largo LED 30W Matt</h3>
+            <p class="product-card__stock">На складе (0)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">780 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -290,14 +323,17 @@
 
           <!-- Product Card 4 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-3.png" alt="Grazioso 3 LED 30" />
             </div>
-            <h3 class="product-name">Grazioso 3 LED 30</h3>
-            <p class="product-stock">На складе (9)</p>
-            <div class="product-footer">
-              <span class="product-price">980 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 3 LED 30</h3>
+            <p class="product-card__stock">На складе (9)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">980 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -318,14 +354,17 @@
 
           <!-- Product Card 5 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-4.png" alt="Presto LED 30W Matt" />
             </div>
-            <h3 class="product-name">Presto LED 30W Matt</h3>
-            <p class="product-stock">На складе (33)</p>
-            <div class="product-footer">
-              <span class="product-price">650 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Presto LED 30W Matt</h3>
+            <p class="product-card__stock">На складе (33)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">650 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -346,14 +385,17 @@
 
           <!-- Product Card 6 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-5.png" alt="Grazioso 4 LED 30" />
             </div>
-            <h3 class="product-name">Grazioso 4 LED 30</h3>
-            <p class="product-stock">На складе (15)</p>
-            <div class="product-footer">
-              <span class="product-price">1100 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 4 LED 30</h3>
+            <p class="product-card__stock">На складе (15)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1100 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -374,14 +416,17 @@
 
           <!-- Product Card 7 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-large.png" alt="TR Kardan S" />
             </div>
-            <h3 class="product-name">TR Kardan S</h3>
-            <p class="product-stock">На складе (0)</p>
-            <div class="product-footer">
-              <span class="product-price">1250 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">TR Kardan S</h3>
+            <p class="product-card__stock">На складе (0)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1250 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -402,14 +447,17 @@
 
           <!-- Product Card 8 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img.png" alt="Grazioso 2 LED 2x30W" />
             </div>
-            <h3 class="product-name">Grazioso 2 LED 2x30W</h3>
-            <p class="product-stock">На складе (18)</p>
-            <div class="product-footer">
-              <span class="product-price">1200 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 2 LED 2x30W</h3>
+            <p class="product-card__stock">На складе (18)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1200 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -429,15 +477,18 @@
           </div>
 
           <!-- Product Card 9 -->
-          <div class="product-card large">
-            <div class="product-image">
+          <div class="product-card product-card--large">
+            <div class="product-card__image">
               <img src="images/img-large2.png" alt="Largo LED 30W Matt" />
             </div>
-            <h3 class="product-name">Largo LED 30W Matt</h3>
-            <p class="product-stock">На складе (0)</p>
-            <div class="product-footer">
-              <span class="product-price">780 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Largo LED 30W Matt</h3>
+            <p class="product-card__stock">На складе (0)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">780 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -458,14 +509,17 @@
 
           <!-- Product Card 10 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-3.png" alt="Grazioso 3 LED 30" />
             </div>
-            <h3 class="product-name">Grazioso 3 LED 30</h3>
-            <p class="product-stock">На складе (9)</p>
-            <div class="product-footer">
-              <span class="product-price">980 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 3 LED 30</h3>
+            <p class="product-card__stock">На складе (9)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">980 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -486,14 +540,17 @@
 
           <!-- Product Card 11 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-4.png" alt="Presto LED 30W Matt" />
             </div>
-            <h3 class="product-name">Presto LED 30W Matt</h3>
-            <p class="product-stock">На складе (33)</p>
-            <div class="product-footer">
-              <span class="product-price">650 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Presto LED 30W Matt</h3>
+            <p class="product-card__stock">На складе (33)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">650 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -514,14 +571,17 @@
 
           <!-- Product Card 12 -->
           <div class="product-card">
-            <div class="product-image">
+            <div class="product-card__image">
               <img src="images/img-5.png" alt="Grazioso 4 LED 30" />
             </div>
-            <h3 class="product-name">Grazioso 4 LED 30</h3>
-            <p class="product-stock">На складе (15)</p>
-            <div class="product-footer">
-              <span class="product-price">1100 P</span>
-              <button class="cart-btn" aria-label="Добавить в корзину">
+            <h3 class="product-card__title">Grazioso 4 LED 30</h3>
+            <p class="product-card__stock">На складе (15)</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">1100 P</span>
+              <button
+                class="product-card__cart-button"
+                aria-label="Добавить в корзину"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -544,19 +604,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-item">
-          <a href="tel:+79161289982" class="footer-phone">+7 (916) 128-99-82</a>
+    <footer class="site-footer">
+      <div class="site-footer__content">
+        <div class="site-footer__item">
+          <a href="tel:+79161289982" class="site-footer__phone"
+            >+7 (916) 128-99-82</a
+          >
         </div>
-        <div class="footer-item">
-          <a href="mailto:Daytesvet@gmail.com" class="footer-email"
+        <div class="site-footer__item">
+          <a href="mailto:Daytesvet@gmail.com" class="site-footer__email"
             >Daytesvet@gmail.com</a
           >
         </div>
-        <div class="footer-item">
-          <p class="footer-copyright">[DAYTESVET] © 2025</p>
-          <p class="footer-design">Дизайн: Raion</p>
+        <div class="site-footer__item">
+          <p class="site-footer__copyright">[DAYTESVET] © 2025</p>
+          <p class="site-footer__design">Дизайн: Raion</p>
         </div>
       </div>
     </footer>

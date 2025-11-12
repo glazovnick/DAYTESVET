@@ -2,23 +2,29 @@ const burgerMenuBtn = document.getElementById("burgerMenuBtn");
 const mobileSidebar = document.getElementById("mobileSidebar");
 const mobileSidebarOverlay = document.getElementById("mobileSidebarOverlay");
 
-burgerMenuBtn.addEventListener("click", () => {
-  mobileSidebar.classList.toggle("active");
-  mobileSidebarOverlay.classList.toggle("active");
-  burgerMenuBtn.classList.toggle("active");
-  document.body.style.overflow = mobileSidebar.classList.contains("active")
-    ? "hidden"
-    : "";
-});
+const toggleMobileMenu = () => {
+  const isOpen = mobileSidebar.classList.toggle("mobile-menu--open");
+  mobileSidebarOverlay.classList.toggle(
+    "mobile-menu__overlay--visible",
+    isOpen
+  );
+  burgerMenuBtn.classList.toggle("site-header__burger--active", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+};
+
+burgerMenuBtn.addEventListener("click", toggleMobileMenu);
 
 const mobileCloseBtn = document.getElementById("mobileCloseBtn");
 
 const closeMobileMenu = () => {
-  mobileSidebar.classList.remove("active");
-  mobileSidebarOverlay.classList.remove("active");
-  burgerMenuBtn.classList.remove("active");
+  mobileSidebar.classList.remove("mobile-menu--open");
+  mobileSidebarOverlay.classList.remove("mobile-menu__overlay--visible");
+  burgerMenuBtn.classList.remove("site-header__burger--active");
   document.body.style.overflow = "";
 };
 
 mobileSidebarOverlay.addEventListener("click", closeMobileMenu);
-mobileCloseBtn.addEventListener("click", closeMobileMenu);
+
+if (mobileCloseBtn) {
+  mobileCloseBtn.addEventListener("click", closeMobileMenu);
+}
