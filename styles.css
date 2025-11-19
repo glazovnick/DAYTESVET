@@ -293,7 +293,7 @@ img {
 .catalog-sidebar__count {
   color: var(--color-secondary);
   font-weight: 400;
-  font-style: Italic;
+  font-style: italic;
   font-size: 12px;
   margin-inline: 10px;
   padding-inline: 2px;
@@ -353,7 +353,6 @@ img {
   font-weight: 900;
   color: var(--color-primary);
   margin-bottom: 0;
-  line-height: 1.4;
   flex-grow: 1;
   line-height: 140%;
   padding-block: 8px;
@@ -453,7 +452,6 @@ img {
 .site-footer__email {
   color: var(--color-primary);
   font-size: 24px;
-  text-decoration: underline;
   transition: opacity 0.3s;
   font-weight: 400;
   text-decoration: underline;
@@ -972,26 +970,8 @@ img {
     gap: 15px;
   }
 
-  .product-card {
-    /* width: calc(50% - 7.5px);
-    min-width: 140px; */
-  }
-
-  .product-card--large {
-    /* width: 100%;
-    max-width: 100%; */
-  }
-
   .product-card__title {
     font-size: 14px;
-  }
-
-  .product-card__stock {
-    font-size: 12px;
-  }
-
-  .product-card__price {
-    font-size: 16px;
   }
 
   .product-card__cart-button {

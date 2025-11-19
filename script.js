@@ -74,7 +74,10 @@ const closeAllMenuSections = (exceptElement = null) => {
 const mobileMenuSectionTitle = document.querySelector(
   ".mobile-menu__section-title--toggle"
 );
-const mobileMenuCategoryList = document.querySelector(
+const mobileMenuSection = mobileMenuSectionTitle?.closest(
+  ".mobile-menu__section"
+);
+const mobileMenuCategoryList = mobileMenuSection?.querySelector(
   ".mobile-menu__category-list"
 );
 
