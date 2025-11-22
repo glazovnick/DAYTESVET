@@ -1,4 +1,5 @@
 /node_modules/
 /.git/
+/convert-px-to-rem.js/
 /**/Thumbs.db
 /**/*.DS_Store
