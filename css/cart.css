@@ -349,7 +349,8 @@
 }
 
 .checkout-phone input:focus {
-  outline: none;
+  outline: 2px solid var(--color-primary);
+  outline-offset: 0;
 }
 
 .checkout-phone--inline {

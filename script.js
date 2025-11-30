@@ -373,3 +373,148 @@ if (paymentRadios.length > 0 && legalEmailField) {
   // Initialize on page load
   toggleLegalEmail();
 }
+
+// Checkout form validation
+const checkoutForm = document.querySelector(".checkout-form");
+const checkoutSubmitButton = document.querySelector(".checkout-submit__button");
+
+if (checkoutForm && checkoutSubmitButton) {
+  // Helper function to check if a value is non-empty
+  const isNotEmpty = (value) => value && value.trim().length > 0;
+
+  // Helper function to validate email format
+  const isValidEmail = (email) => {
+    if (!email) return false;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email.trim());
+  };
+
+  // Helper function to validate phone format (basic check for Russian phone)
+  const isValidPhone = (phone) => {
+    if (!phone) return false;
+    // Remove spaces, dashes, and parentheses for validation
+    const cleaned = phone.replace(/[\s\-\(\)]/g, "");
+    // Check if it starts with +7 and has at least 10 more digits
+    return /^\+7\d{10,}$/.test(cleaned);
+  };
+
+  // Main validation function
+  const validateForm = () => {
+    let isValid = true;
+
+    // Check all inputs with required attribute
+    const requiredInputs = checkoutForm.querySelectorAll("input[required]");
+    requiredInputs.forEach((input) => {
+      if (input.type === "email" && !isValidEmail(input.value)) {
+        isValid = false;
+      } else if (input.type === "tel" && !isValidPhone(input.value)) {
+        isValid = false;
+      } else if (!isNotEmpty(input.value)) {
+        isValid = false;
+      }
+    });
+
+    // Check payment method (at least one should be selected)
+    const selectedPayment = document.querySelector(
+      'input[name="payment"]:checked'
+    );
+    if (!selectedPayment) {
+      isValid = false;
+    }
+
+    // If payment is "legal", validate legal email
+    if (selectedPayment?.value === "legal") {
+      const legalEmailInput = document.querySelector(
+        "#legalEmailField .checkout-input"
+      );
+      if (legalEmailInput && !isValidEmail(legalEmailInput.value)) {
+        isValid = false;
+      }
+    }
+
+    // Check delivery method (at least one should be selected)
+    const selectedDelivery = document.querySelector(
+      'input[name="delivery"]:checked'
+    );
+    if (!selectedDelivery) {
+      isValid = false;
+    } else {
+      const deliveryOption = selectedDelivery.closest(".delivery-option");
+
+      // Validate based on selected delivery method
+      if (deliveryOption?.classList.contains("delivery-option--pickup")) {
+        // Самовывоз: phone is required
+        const pickupPhone = document.getElementById("pickupPhone");
+        if (!pickupPhone || !isValidPhone(pickupPhone.value)) {
+          isValid = false;
+        }
+      } else if (
+        deliveryOption?.classList.contains("delivery-option--moscow")
+      ) {
+        // Доставка по Москве: phone, street, and house are required
+        const moscowPhone = deliveryOption.querySelector(
+          ".delivery-moscow__phone input"
+        );
+        const streetInput = deliveryOption.querySelector(
+          ".delivery-moscow__grid .delivery-field--wide input"
+        );
+
+        // Find house input by finding the delivery-field with label "Дом"
+        let houseInput = null;
+        const deliveryFields = deliveryOption.querySelectorAll(
+          ".delivery-moscow__grid .delivery-field"
+        );
+        deliveryFields.forEach((field) => {
+          const label = field.querySelector(".delivery-field__label");
+          if (label && label.textContent.trim() === "Дом") {
+            houseInput = field.querySelector("input");
+          }
+        });
+
+        if (!moscowPhone || !isValidPhone(moscowPhone.value)) {
+          isValid = false;
+        }
+        if (!streetInput || !isNotEmpty(streetInput.value)) {
+          isValid = false;
+        }
+        if (!houseInput || !isNotEmpty(houseInput.value)) {
+          isValid = false;
+        }
+      } else {
+        // Доставка в регионы: phone OR email is required (at least one)
+        const regionPhone = document.getElementById("regionPhone");
+        const regionEmail = document.getElementById("regionEmail");
+
+        const hasValidPhone = regionPhone && isValidPhone(regionPhone.value);
+        const hasValidEmail = regionEmail && isValidEmail(regionEmail.value);
+
+        if (!hasValidPhone && !hasValidEmail) {
+          isValid = false;
+        }
+      }
+    }
+
+    // Update submit button state
+    checkoutSubmitButton.disabled = !isValid;
+    return isValid;
+  };
+
+  // Add event listeners to all form inputs
+  const formInputs = checkoutForm.querySelectorAll("input");
+  formInputs.forEach((input) => {
+    input.addEventListener("input", validateForm);
+    input.addEventListener("change", validateForm);
+  });
+
+  // Validate on form submit to prevent bypass
+  checkoutForm.addEventListener("submit", (event) => {
+    if (!validateForm()) {
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    }
+  });
+
+  // Initial validation on page load
+  validateForm();
+}

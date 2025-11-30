@@ -39,7 +39,7 @@
 /* Product Detail Layout */
 .product-detail {
   display: grid;
-  grid-template-columns: 50% minmax(250px, 610px);
+  grid-template-columns: 60% minmax(250px, 610px);
   gap: 1.25rem;
   align-items: start;
 }
