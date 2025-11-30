@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DAYTESVET - Интернет магазин освещения</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product.css" />
   </head>
   <body>
     <!-- Hidden SVG Symbols -->
@@ -348,329 +349,213 @@
     <main class="page-main">
       <!-- Sidebar -->
       <aside class="catalog-sidebar">
-        <ul class="catalog-sidebar__list">
-          <li class="catalog-sidebar__item">
-            <a href="#" class="catalog-sidebar__link">Линейные светильники</a>
-            <span class="catalog-sidebar__count">(48)</span>
-          </li>
-          <li class="catalog-sidebar__item">
-            <a
-              href="#"
-              class="catalog-sidebar__link catalog-sidebar__link--active"
-              >Фигурные светильники</a
+        <a href="index.html" class="catalog-sidebar__back-link">
+          <span class="catalog-sidebar__arrow">
+            <svg
+              width="74"
+              height="30"
+              viewBox="0 0 74 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-            <span class="catalog-sidebar__count">(27)</span>
-          </li>
-          <li class="catalog-sidebar__item">
-            <a href="#" class="catalog-sidebar__link"
-              >Встраиваемые светильники</a
-            >
-            <span class="catalog-sidebar__count">(56)</span>
-          </li>
-          <li class="catalog-sidebar__item">
-            <a href="#" class="catalog-sidebar__link">Настенные светильники</a>
-            <span class="catalog-sidebar__count">(31)</span>
-          </li>
-          <li class="catalog-sidebar__item">
-            <a href="#" class="catalog-sidebar__link">Трековые светильники</a>
-            <span class="catalog-sidebar__count">(16)</span>
-          </li>
-          <li class="catalog-sidebar__item">
-            <a href="#" class="catalog-sidebar__link">Промышленное освещение</a>
-            <span class="catalog-sidebar__count">(20)</span>
-          </li>
-        </ul>
+              <path
+                d="M72 16.7279C73.1046 16.7279 74 15.8325 74 14.7279C74 13.6233 73.1046 12.7279 72 12.7279V14.7279V16.7279ZM0.585785 13.3137C-0.195259 14.0947 -0.195259 15.3611 0.585785 16.1421L13.3137 28.87C14.0948 29.6511 15.3611 29.6511 16.1421 28.87C16.9232 28.089 16.9232 26.8227 16.1421 26.0416L4.82843 14.7279L16.1421 3.4142C16.9232 2.63315 16.9232 1.36682 16.1421 0.58577C15.3611 -0.195279 14.0948 -0.195279 13.3137 0.58577L0.585785 13.3137ZM72 14.7279V12.7279L2 12.7279V14.7279V16.7279L72 16.7279V14.7279Z"
+                fill="#333"
+              />
+            </svg>
+          </span>
+          <span class="catalog-sidebar__text">вернуться в каталог</span>
+        </a>
       </aside>
 
       <!-- Products Grid -->
       <section class="product-gallery">
-        <div class="product-gallery__grid">
-          <!-- Product Card 1 -->
-          <div class="product-card product-card--large">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="TR Kardan S" />
-            </a>
-            <h3 class="product-card__title">TR Kardan S</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(0)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1250 ₽</span>
+        <div class="product-detail">
+          <div class="product-detail__left">
+            <h1 class="product-detail__title">
+              СВЕТОДИОДНЫЙ СВЕТИЛЬНИК «TR KARDAN S»
+            </h1>
+
+            <table class="product-detail__specs">
+              <tr>
+                <td class="product-detail__spec-label">Производитель</td>
+                <td class="product-detail__spec-value">Kardan</td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Мощность</td>
+                <td class="product-detail__spec-value">40 Вт</td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Световой поток</td>
+                <td class="product-detail__spec-value">95 лм/Вт</td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Цветовая температура</td>
+                <td class="product-detail__spec-value">
+                  3000 K / 4000 K / 5000 K
+                </td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Диаграмма</td>
+                <td class="product-detail__spec-value">
+                  15°, 23°, 30°, 45°, 60°
+                </td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Индекс цветопередачи</td>
+                <td class="product-detail__spec-value">CRI90, CRI95, CRI97</td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Цвет корпуса</td>
+                <td class="product-detail__spec-value">белый/черный</td>
+              </tr>
+              <tr>
+                <td class="product-detail__spec-label">Гарантия</td>
+                <td class="product-detail__spec-value">3 года</td>
+              </tr>
+            </table>
+
+            <div class="product-detail__gallery">
+              <div class="product-detail__gallery-wrapper">
+                <div class="product-detail__gallery-track">
+                  <img
+                    src="images/img.jpeg"
+                    alt="TR Kardan S - вид 1"
+                    class="product-detail__gallery-thumb"
+                  />
+                  <img
+                    src="images/img-2.png"
+                    alt="TR Kardan S - вид 2"
+                    class="product-detail__gallery-thumb"
+                  />
+                  <img
+                    src="images/img-3.png"
+                    alt="TR Kardan S - вид 3"
+                    class="product-detail__gallery-thumb"
+                  />
+                  <img
+                    src="images/img.jpeg"
+                    alt="TR Kardan S - вид 4"
+                    class="product-detail__gallery-thumb"
+                  />
+                  <img
+                    src="images/img-2.png"
+                    alt="TR Kardan S - вид 2"
+                    class="product-detail__gallery-thumb"
+                  />
+                  <img
+                    src="images/img-3.png"
+                    alt="TR Kardan S - вид 3"
+                    class="product-detail__gallery-thumb"
+                  />
+                </div>
+              </div>
+              <div class="product-detail__gallery-nav">
                 <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
+                  class="product-detail__gallery-arrow product-detail__gallery-arrow--prev"
+                  aria-label="Предыдущее изображение"
                 >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
+                  <svg
+                    width="42"
+                    height="15"
+                    viewBox="0 0 74 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M72 16.7279C73.1046 16.7279 74 15.8325 74 14.7279C74 13.6233 73.1046 12.7279 72 12.7279V14.7279V16.7279ZM0.585785 13.3137C-0.195259 14.0947 -0.195259 15.3611 0.585785 16.1421L13.3137 28.87C14.0948 29.6511 15.3611 29.6511 16.1421 28.87C16.9232 28.089 16.9232 26.8227 16.1421 26.0416L4.82843 14.7279L16.1421 3.4142C16.9232 2.63315 16.9232 1.36682 16.1421 0.58577C15.3611 -0.195279 14.0948 -0.195279 13.3137 0.58577L0.585785 13.3137ZM72 14.7279V12.7279L2 12.7279V14.7279V16.7279L72 16.7279V14.7279Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="product-detail__gallery-arrow product-detail__gallery-arrow--next"
+                  aria-label="Следующее изображение"
+                >
+                  <svg
+                    width="42"
+                    height="15"
+                    viewBox="0 0 74 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 13.2721C0.895431 13.2721 0 14.1675 0 15.2721C0 16.3767 0.895431 17.2721 2 17.2721V15.2721V13.2721ZM73.4142 16.6863C74.1953 15.9053 74.1953 14.6389 73.4142 13.8579L60.6863 1.13C59.9052 0.348948 58.6389 0.348948 57.8579 1.13C57.0768 1.91105 57.0768 3.17738 57.8579 3.95843L69.1716 15.2721L57.8579 26.5858C57.0768 27.3668 57.0768 28.6332 57.8579 29.4142C58.6389 30.1953 59.9052 30.1953 60.6863 29.4142L73.4142 16.6863ZM2 15.2721V17.2721L72 17.2721V15.2721V13.2721L2 13.2721V15.2721Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </button>
               </div>
             </div>
-            <div class="product-card__separator"></div>
           </div>
 
-          <!-- Product Card 2 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img-2.png" alt="Grazioso 2 LED 2x30W" />
-            </a>
-            <h3 class="product-card__title">Grazioso 2 LED 2x30W</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(18)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1200 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
+          <div class="product-detail__right">
+            <div class="product-detail__main-image">
+              <img
+                src="images/img.jpeg"
+                alt="СВЕТОДИОДНЫЙ СВЕТИЛЬНИК TR KARDAN S"
+                class="product-detail__main-img"
+              />
             </div>
-            <div class="product-card__separator"></div>
+            <div class="product-detail__dimensions">
+              <div class="product-detail__dimensions-label">Размеры</div>
+              <div class="product-detail__dimensions-value">194х194х100 мм</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Description Block -->
+        <div class="product-description">
+          <div class="product-description__main">
+            <p class="product-description__intro">
+              Светодиодная люстра из алюминиевого профиля — современное и
+              стильное решение для освещения помещений. Алюминиевый профиль
+              используется для создания каркаса, на который крепятся
+              светодиодные модули. Благодаря этому, светильник имеет компактный
+              размер и лёгкий вес, что позволяет устанавливать его на любой
+              потолок.
+            </p>
           </div>
 
-          <!-- Product Card 3 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img-3.png" alt="Largo LED 30W Matt" />
-            </a>
-            <h3 class="product-card__title">Largo LED 30W Matt</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(0)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">780 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
+          <div class="product-description__features">
+            <div class="product-description__feature-column">
+              <p class="product-description__feature-text">
+                Светодиодные модули могут быть разных цветов и яркости, что
+                позволяет выбрать оптимальный вариант для каждого помещения.
+                Кроме того, светодиодный светильник потребляет меньше
+                электроэнергии, чем обычные лампы, что делает его более
+                экономичным и экологичным.
+              </p>
             </div>
-            <div class="product-card__separator"></div>
+            <div class="product-description__feature-column">
+              <p class="product-description__feature-text">
+                Люстра из алюминиевого профиля может быть использована как в
+                жилых помещениях, так и в коммерческих — офисах, ресторанах,
+                магазинах. Она создаёт яркое и равномерное освещение, что
+                особенно важно для рабочих зон и мест, где необходимо читать или
+                работать с документами.
+              </p>
+            </div>
           </div>
 
-          <!-- Product Card 4 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Grazioso 3 LED 30" />
-            </a>
-            <h3 class="product-card__title">Grazioso 3 LED 30</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(9)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">980 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
+          <div class="product-description__conclusion">
+            <p class="product-description__conclusion-text">
+              Светодиодная люстра из алюминиевого профиля — отличный выбор для
+              тех, кто хочет получить качественное и экономичное освещение
+              своего дома или офиса.
+            </p>
           </div>
 
-          <!-- Product Card 5 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Presto LED 30W Matt" />
-            </a>
-            <h3 class="product-card__title">Presto LED 30W Matt</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(33)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">650 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
+          <div class="product-description__footer">
+            <div class="product-description__price-info">
+              <div class="product-description__price">1250 Р</div>
+              <div class="product-description__stock">
+                Количество на складе: 0 шт.
               </div>
             </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 6 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Grazioso 4 LED 30" />
-            </a>
-            <h3 class="product-card__title">Grazioso 4 LED 30</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(15)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1100 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 7 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="TR Kardan S" />
-            </a>
-            <h3 class="product-card__title">TR Kardan S</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(0)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1250 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 8 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Grazioso 2 LED 2x30W" />
-            </a>
-            <h3 class="product-card__title">Grazioso 2 LED 2x30W</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(18)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1200 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 9 -->
-          <div class="product-card product-card--large">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Largo LED 30W Matt" />
-            </a>
-            <h3 class="product-card__title">Largo LED 30W Matt</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(0)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">780 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 10 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Grazioso 3 LED 30" />
-            </a>
-            <h3 class="product-card__title">Grazioso 3 LED 30</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(9)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">980 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 11 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Presto LED 30W Matt" />
-            </a>
-            <h3 class="product-card__title">Presto LED 30W Matt</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(133)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">650 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
-          </div>
-
-          <!-- Product Card 12 -->
-          <div class="product-card">
-            <a href="product.html" class="product-card__image">
-              <img src="images/img.jpeg" alt="Grazioso 4 LED 30" />
-            </a>
-            <h3 class="product-card__title">Grazioso 4 LED 30</h3>
-            <div class="product-card__separator"></div>
-            <div class="product-card__footer">
-              <p class="product-card__stock">На складе <span>(15)</span></p>
-              <div class="product-card__footer-right">
-                <span class="product-card__price">1100 ₽</span>
-                <button
-                  class="product-card__cart-button"
-                  aria-label="Добавить в корзину"
-                >
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use href="#cart-icon"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="product-card__separator"></div>
+            <button class="product-description__button">
+              УЗНАТЬ О ПОСТУПЛЕНИИ
+            </button>
           </div>
         </div>
       </section>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAYTESVET - Интернет магазин освещения</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <!-- Hidden SVG Symbols -->
+    <svg style="display: none" aria-hidden="true">
+      <symbol
+        id="cart-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path
+          d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+        ></path>
+      </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <button
+          class="site-header__burger"
+          aria-label="Меню"
+          id="burgerMenuBtn"
+        >
+          <span class="site-header__burger-line"></span>
+          <span class="site-header__burger-line"></span>
+          <span class="site-header__burger-line"></span>
+        </button>
+        <nav class="site-header__nav">
+          <a
+            href="#"
+            class="site-header__nav-link site-header__nav-link--active"
+            >Внутреннее освещение</a
+          >
+          <a href="#" class="site-header__nav-link">Внешнее освещение</a>
+          <a href="#" class="site-header__nav-link">Комплектующие</a>
+          <a href="#" class="site-header__nav-link">Изготовление и ремонт</a>
+        </nav>
+        <a href="/" class="site-header__brand">[DAYTESVET]</a>
+        <div class="site-header__actions">
+          <a href="tel:+79161289982" class="site-header__phone">
+            +7 (916) 128-99-82
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="site-header__icon-button" aria-label="Корзина">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Sidebar Dropdown -->
+    <div class="mobile-menu__overlay" id="mobileSidebarOverlay"></div>
+    <aside class="mobile-menu" id="mobileSidebar">
+      <div class="mobile-menu__watermark">DAYTESVET</div>
+
+      <!-- Mobile Sidebar Header -->
+      <div class="mobile-menu__header">
+        <a href="/" class="mobile-menu__logo">[DAYTESVET]</a>
+        <div class="mobile-menu__header-actions">
+          <a href="tel:+79161289982" class="mobile-menu__phone">
+            +7 (916) 128-99-82
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="mobile-menu__cart-button" aria-label="Корзина">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Sidebar Content -->
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__content-box">
+          <ul class="mobile-menu__main-links">
+            <li class="mobile-menu__main-item">
+              <button
+                class="mobile-menu__main-link mobile-menu__main-link--toggle"
+                aria-expanded="false"
+              >
+                <span>Внутреннее освещение</span>
+              </button>
+              <ul
+                class="mobile-menu__category-list mobile-menu__category-list--collapsed"
+              >
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Линейные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(48)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Фигурные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(27)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Встраиваемые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(56)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Настенные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(31)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Трековые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(16)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Промышленное освещение</a
+                  >
+                  <span class="mobile-menu__category-count">(20)</span>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__main-item">
+              <button
+                class="mobile-menu__main-link mobile-menu__main-link--toggle"
+                aria-expanded="false"
+              >
+                <span>Внешнее освещение</span>
+              </button>
+              <ul
+                class="mobile-menu__category-list mobile-menu__category-list--collapsed"
+              >
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Линейные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(48)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Фигурные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(27)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Встраиваемые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(56)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Настенные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(31)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Трековые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(16)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Промышленное освещение</a
+                  >
+                  <span class="mobile-menu__category-count">(20)</span>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__main-item">
+              <button
+                class="mobile-menu__main-link mobile-menu__main-link--toggle"
+                aria-expanded="false"
+              >
+                <span>Комплектующие</span>
+              </button>
+              <ul
+                class="mobile-menu__category-list mobile-menu__category-list--collapsed"
+              >
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Линейные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(48)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Фигурные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(27)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Встраиваемые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(56)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Настенные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(31)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Трековые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(16)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Промышленное освещение</a
+                  >
+                  <span class="mobile-menu__category-count">(20)</span>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile-menu__main-item">
+              <button
+                class="mobile-menu__main-link mobile-menu__main-link--toggle"
+                aria-expanded="false"
+              >
+                <span>Изготовление и ремонт</span>
+              </button>
+              <ul
+                class="mobile-menu__category-list mobile-menu__category-list--collapsed"
+              >
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Линейные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(48)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Фигурные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(27)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Встраиваемые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(56)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Настенные светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(31)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Трековые светильники</a
+                  >
+                  <span class="mobile-menu__category-count">(16)</span>
+                </li>
+                <li class="mobile-menu__category-item">
+                  <a href="#" class="mobile-menu__category-link"
+                    >Промышленное освещение</a
+                  >
+                  <span class="mobile-menu__category-count">(20)</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Sidebar Footer -->
+      <div class="mobile-menu__footer">
+        <a href="tel:+79161289982" class="mobile-menu__footer-phone"
+          >+7 (916) 128-99-82</a
+        >
+        <a href="mailto:Daytesvet@gmail.com" class="mobile-menu__footer-email"
+          >Daytesvet@gmail.com</a
+        >
+        <div class="mobile-menu__footer-brand">[DAYTESVET]</div>
+        <div class="mobile-menu__footer-copy">© 2025</div>
+        <div class="mobile-menu__footer-design">Дизайн: Raion</div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="page-main">
+      <!-- Sidebar -->
+      <aside class="catalog-sidebar">
+        <a href="index.html" class="catalog-sidebar__back-link">
+          <span class="catalog-sidebar__arrow">
+            <svg
+              width="74"
+              height="30"
+              viewBox="0 0 74 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M72 16.7279C73.1046 16.7279 74 15.8325 74 14.7279C74 13.6233 73.1046 12.7279 72 12.7279V14.7279V16.7279ZM0.585785 13.3137C-0.195259 14.0947 -0.195259 15.3611 0.585785 16.1421L13.3137 28.87C14.0948 29.6511 15.3611 29.6511 16.1421 28.87C16.9232 28.089 16.9232 26.8227 16.1421 26.0416L4.82843 14.7279L16.1421 3.4142C16.9232 2.63315 16.9232 1.36682 16.1421 0.58577C15.3611 -0.195279 14.0948 -0.195279 13.3137 0.58577L0.585785 13.3137ZM72 14.7279V12.7279L2 12.7279V14.7279V16.7279L72 16.7279V14.7279Z"
+                fill="#333"
+              />
+            </svg>
+          </span>
+          <span class="catalog-sidebar__text">вернуться в каталог</span>
+        </a>
+      </aside>
+
+      <!-- Products Grid -->
+      <section class="cart-products">
+        <div class="cart-products__inner">
+          <div class="cart-card">
+            <div class="cart-list">
+              <article class="cart-item" data-unit-price="1250">
+                <div class="cart-item__main">
+                  <div class="cart-item__preview" aria-hidden="true">
+                    <img
+                      src="images/img.jpeg"
+                      alt="Светодиодный светильник «TR Kardan S»"
+                    />
+                  </div>
+                  <div class="cart-item__body">
+                    <h3 class="cart-item__name">
+                      Светодиодный светильник «TR Kardan S»
+                    </h3>
+                  </div>
+                </div>
+                <div class="cart-item__qty" aria-label="Количество">
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="decrement"
+                    aria-label="Уменьшить количество"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="cart-item__qty-input"
+                    value="10"
+                    min="1"
+                    inputmode="numeric"
+                  />
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="increment"
+                    aria-label="Увеличить количество"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="cart-item__price">
+                  <span data-item-total>12 500 ₽</span>
+                </div>
+                <button
+                  class="cart-item__remove"
+                  type="button"
+                  aria-label="Удалить товар"
+                >
+                  <svg
+                    class="cart-item__remove-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 6h16"></path>
+                    <path
+                      d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"
+                    ></path>
+                    <path d="M7.5 6h9l-1 13h-7z"></path>
+                  </svg>
+                </button>
+              </article>
+
+              <article class="cart-item" data-unit-price="15260">
+                <div class="cart-item__main">
+                  <div class="cart-item__preview" aria-hidden="true">
+                    <img
+                      src="images/img-2.png"
+                      alt="Светильник парковый «Feron 8115/PL8115»"
+                    />
+                  </div>
+                  <div class="cart-item__body">
+                    <h3 class="cart-item__name">
+                      Светильник парковый «Feron 8115/PL8115»
+                    </h3>
+                  </div>
+                </div>
+                <div class="cart-item__qty" aria-label="Количество">
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="decrement"
+                    aria-label="Уменьшить количество"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="cart-item__qty-input"
+                    value="1"
+                    min="1"
+                    inputmode="numeric"
+                  />
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="increment"
+                    aria-label="Увеличить количество"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="cart-item__price">
+                  <span data-item-total>15 260 ₽</span>
+                </div>
+                <button
+                  class="cart-item__remove"
+                  type="button"
+                  aria-label="Удалить товар"
+                >
+                  <svg
+                    class="cart-item__remove-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 6h16"></path>
+                    <path
+                      d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"
+                    ></path>
+                    <path d="M7.5 6h9l-1 13h-7z"></path>
+                  </svg>
+                </button>
+              </article>
+
+              <article class="cart-item" data-unit-price="5245">
+                <div class="cart-item__main">
+                  <div class="cart-item__preview" aria-hidden="true">
+                    <img
+                      src="images/img-3.png"
+                      alt="Светильник «Feron HTY 02-60-205»"
+                    />
+                  </div>
+                  <div class="cart-item__body">
+                    <h3 class="cart-item__name">
+                      Светильник «Feron HTY 02-60-205»
+                    </h3>
+                  </div>
+                </div>
+                <div class="cart-item__qty" aria-label="Количество">
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="decrement"
+                    aria-label="Уменьшить количество"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    class="cart-item__qty-input"
+                    value="5"
+                    min="1"
+                    inputmode="numeric"
+                  />
+                  <button
+                    type="button"
+                    class="cart-item__qty-btn"
+                    data-action="increment"
+                    aria-label="Увеличить количество"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="cart-item__price">
+                  <span data-item-total>26 225 ₽</span>
+                </div>
+                <button
+                  class="cart-item__remove"
+                  type="button"
+                  aria-label="Удалить товар"
+                >
+                  <svg
+                    class="cart-item__remove-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 6h16"></path>
+                    <path
+                      d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"
+                    ></path>
+                    <path d="M7.5 6h9l-1 13h-7z"></path>
+                  </svg>
+                </button>
+              </article>
+
+              <div class="cart-toolbar">
+                <div class="cart-toolbar__spacer"></div>
+                <span class="cart-toolbar__label">Товаров на сумму:</span>
+                <strong class="cart-toolbar__price" data-cart-total
+                  >53 985 ₽</strong
+                >
+                <button class="cart-toolbar__clear" type="button">
+                  Очистить корзину
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <form class="checkout-form">
+            <fieldset class="checkout-section">
+              <legend class="checkout-section__title">Способ оплаты</legend>
+              <label class="checkout-option">
+                <input type="radio" name="payment" value="cash" checked />
+                <span>Наличными при получении</span>
+              </label>
+              <label class="checkout-option">
+                <input type="radio" name="payment" value="card" />
+                <span>Банковской картой при получении</span>
+              </label>
+              <label class="checkout-option">
+                <input type="radio" name="payment" value="legal" />
+                <span>Юрлицо</span>
+              </label>
+              <div
+                class="checkout-section__legal-email"
+                id="legalEmailField"
+                style="display: none"
+              >
+                <p class="checkout-section__hint">
+                  Адрес электронной почты для отправки реквизитов и выставления
+                  счета
+                </p>
+                <input
+                  class="form-input checkout-input"
+                  type="email"
+                  placeholder="example@mail.ru"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset class="checkout-section">
+              <legend class="checkout-section__title">Доставка</legend>
+
+              <div class="delivery-option delivery-option--pickup">
+                <label class="checkout-option">
+                  <input type="radio" name="delivery" checked />
+                  <span>Самовывоз</span>
+                </label>
+                <div class="delivery-option__body">
+                  <div class="pickup-phone">
+                    <label class="pickup-phone__label" for="pickupPhone"
+                      >Номер телефона</label
+                    >
+                    <input
+                      id="pickupPhone"
+                      class="form-input checkout-input pickup-phone__input"
+                      type="tel"
+                      inputmode="tel"
+                      placeholder="+7 ()"
+                    />
+                  </div>
+                  <div class="pickup-address">
+                    <p>
+                      Московская область, г. Подольск, д. Борисовка, тер.
+                      «НКН–Строй», строение 1.
+                    </p>
+                    <p>Пн. – Пт.: 09:00 – 18:00</p>
+                    <p>Сб. – Вс.: 12:00 – 17:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="delivery-option delivery-option--moscow">
+                <label class="checkout-option">
+                  <input type="radio" name="delivery" />
+                  <span>Доставка по Москве</span>
+                </label>
+                <div
+                  class="delivery-option__body delivery-option__body--compact"
+                >
+                  <div class="delivery-moscow__phone">
+                    <span class="delivery-field__label">Номер телефона</span>
+                    <input class="form-input" type="tel" placeholder="+7 ()" />
+                  </div>
+                  <div class="delivery-moscow__grid">
+                    <div class="delivery-field delivery-field--wide">
+                      <span class="delivery-field__label">Улица</span>
+                      <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Улица"
+                      />
+                    </div>
+                    <div class="delivery-field">
+                      <span class="delivery-field__label">Дом</span>
+                      <input class="form-input" type="text" placeholder="Дом" />
+                    </div>
+                    <div class="delivery-field">
+                      <span class="delivery-field__label">Корпус</span>
+                      <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Корпус"
+                      />
+                    </div>
+                    <div class="delivery-field">
+                      <span class="delivery-field__label">Подъезд</span>
+                      <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Подъезд"
+                      />
+                    </div>
+                    <div class="delivery-field">
+                      <span class="delivery-field__label">Этаж</span>
+                      <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Этаж"
+                      />
+                    </div>
+                    <div class="delivery-field">
+                      <span class="delivery-field__label">Квартира/Офис</span>
+                      <input
+                        class="form-input"
+                        type="text"
+                        placeholder="Квартира/Офис"
+                      />
+                    </div>
+                  </div>
+                  <div class="delivery-moscow__schedule">
+                    <span class="delivery-field__label"
+                      >Выберите удобное время доставки:</span
+                    >
+                    <div class="delivery-moscow__slots">
+                      <label class="delivery-slot">
+                        <input type="radio" name="delivery-time" checked />
+                        <span>Сегодня, с 15:00 до 18:00</span>
+                      </label>
+                      <label class="delivery-slot">
+                        <input type="radio" name="delivery-time" />
+                        <span>Завтра, с 09:00 до 19:00</span>
+                      </label>
+                      <button
+                        class="delivery-option__schedule"
+                        type="button"
+                        disabled
+                      >
+                        Выбрать дату и время
+                      </button>
+                    </div>
+                  </div>
+                  <p class="delivery-moscow__hint">
+                    Стоимость и срок доставки зависят от вашего округа.
+                  </p>
+                </div>
+              </div>
+
+              <div class="delivery-option">
+                <label class="checkout-option">
+                  <input type="radio" name="delivery" />
+                  <span>Доставка в регионы</span>
+                </label>
+                <div class="delivery-option__body">
+                  <div class="delivery-region__phone">
+                    <label class="delivery-region__label" for="regionPhone"
+                      >Номер телефона</label
+                    >
+                    <input
+                      id="regionPhone"
+                      class="form-input checkout-input delivery-region__input"
+                      type="tel"
+                      inputmode="tel"
+                      placeholder="+7 ()"
+                    />
+                  </div>
+                  <div class="delivery-region__email">
+                    <label class="delivery-region__label" for="regionEmail"
+                      >Электронная почта</label
+                    >
+                    <input
+                      id="regionEmail"
+                      class="form-input checkout-input delivery-region__input"
+                      type="email"
+                      placeholder="example@mail.ru"
+                    />
+                  </div>
+                  <p class="delivery-option__hint">
+                    Оставьте номер телефона или адрес электронной почты и наши
+                    сотрудники свяжутся с вами в ближайшее время для уточнения
+                    стоимости и сроков доставки в ваш регион.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="checkout-submit">
+              <div class="checkout-total">
+                <span>Итоговая сумма:</span>
+                <strong data-cart-total>53 985 ₽</strong>
+              </div>
+              <button type="submit" class="checkout-submit__button" disabled>
+                Оформить заказ
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__content">
+        <a href="tel:+79161289982" class="site-footer__phone"
+          >+7 (916) 128-99-82</a
+        >
+        <a href="mailto:Daytesvet@gmail.com" class="site-footer__email"
+          >Daytesvet@gmail.com</a
+        >
+        <div class="site-footer__brand">
+          <span class="site-footer__brand-name">[DAYTESVET]</span>
+          <span class="site-footer__copyright">© 2025</span>
+        </div>
+        <div class="site-footer__design">
+          <span class="site-footer__design-label">Дизайн:</span>
+          <a href="#" class="site-footer__design-link">Raion</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
