@@ -459,17 +459,20 @@ if (checkoutForm && checkoutSubmitButton) {
           ".delivery-moscow__grid .delivery-field--wide input"
         );
 
-        // Find house input by finding the delivery-field with label "Дом"
-        let houseInput = null;
-        const deliveryFields = deliveryOption.querySelectorAll(
-          ".delivery-moscow__grid .delivery-field"
-        );
-        deliveryFields.forEach((field) => {
-          const label = field.querySelector(".delivery-field__label");
-          if (label && label.textContent.trim() === "Дом") {
-            houseInput = field.querySelector("input");
-          }
-        });
+        // Find house input using stable selector with fallback
+        let houseInput = deliveryOption.querySelector('[data-field="house"]');
+        // Fallback: search by label text if stable selector not found
+        if (!houseInput) {
+          const deliveryFields = deliveryOption.querySelectorAll(
+            ".delivery-moscow__grid .delivery-field"
+          );
+          deliveryFields.forEach((field) => {
+            const label = field.querySelector(".delivery-field__label");
+            if (label && label.textContent.trim() === "Дом") {
+              houseInput = field.querySelector("input");
+            }
+          });
+        }
 
         if (!moscowPhone || !isValidPhone(moscowPhone.value)) {
           isValid = false;
